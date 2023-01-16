@@ -1,0 +1,1 @@
+Java by Comparison applies a novel approach to presenting ideas for beginning and intermediate Java developers to learn techniques they can practice to become better Java developers and to write better code that will benefit others and themselves.

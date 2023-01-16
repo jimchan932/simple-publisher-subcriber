@@ -1,0 +1,1 @@
+Head First Java is an unique beginner book. This book show you the syntax of java and also let think like a java programmer in a unique way. This book is a complete introduction to java and object-oriented programming. It’s fast, fun and most importantly effective.

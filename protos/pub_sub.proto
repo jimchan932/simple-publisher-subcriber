@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option objc_class_prefix = "RTG";
+
+package pubsub;
+
+// Interface exported by the server.
+service PublisherSubscriber {
+  // outputs time message
+  rpc Publish(PublishMessage) returns(PublishedTime) {} // sends to server
+  rpc Subscribe(SubscribeInfo) returns (stream ReceivedMessage) {} // sends to client
+  rpc GetSubscriptionMsg(SubscribeInfo) returns (stream ReceivedMessage) {} 
+}
+
+message PublishMessage
+{
+	int32 topicID = 1;
+	int32 reviewID = 2;
+	string review = 3;
+}
+
+message SubscribeInfo
+{
+	int32 subscriptionTopicID = 1;	
+	int32 subscriberID = 2;
+}
+
+message ReceivedMessage
+{
+	int32 subscriberID = 1;
+	string publishedTime = 2;
+	string review = 3;
+}
+
+message PublishedTime
+{
+	string publishedTime = 1;
+}
